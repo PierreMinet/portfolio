@@ -5,7 +5,7 @@ function Hero() {
         <motion.article
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 3, type: "tween" }}
+        transition={{ delay: 0.5, duration: 3, type: "tween" }}
         className="hero-banner">
             <h1>Junior Front End Developer</h1>
             <h2>Graphic Designer</h2>

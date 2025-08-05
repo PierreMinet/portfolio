@@ -1,9 +1,14 @@
 import hero from '../images/bio_pic.webp';
+import { motion } from "motion/react";
 
 function Overview() {
     return (
         <>
-        <article>
+        <motion.article
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 3, type: "tween" }}
+        >
             <div className="half-div">
             <h3>My name is Pierre, and this is what I do</h3>
             <p>I am a <b>Junior Front End developer</b> who works mainly with <b>React JS</b>, but also an <b>experienced graphic designer</b> who worked in the music industry, and an UI & UX designer.</p>
@@ -11,9 +16,9 @@ function Overview() {
             <p>I worked on several <b>web projects</b>, mainly focused on <b>React JS</b>.</p>
             </div>
             <div className="half-div">
-                <img src={hero} width={400} height={403} alt="Hero image" />
+                <img src={hero} width={400} height={403} alt="Me" />
             </div>
-        </article>
+        </motion.article>
         </>
     );
 };
