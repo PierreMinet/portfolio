@@ -4,7 +4,6 @@ import HomePage from './components/HomePage.js';
 import Footer from './components/Footer.js';
 import { Route, Routes } from 'react-router-dom';
 
-
 function App() {
   return (
     <>

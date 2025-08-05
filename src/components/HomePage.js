@@ -2,6 +2,7 @@ import Bio from './Bio.js';
 import Projects from './Projects.js';
 import Overview from './Overview.js';
 import Hero from './Hero.js';
+import { motion } from "motion/react";
 
 function HomePage() {
     return (
@@ -10,10 +11,18 @@ function HomePage() {
             <div className='separator'></div>
             <Overview />
             <div className='separator'></div>
-            <h2 className='filled-title'>Projects</h2>
+            <motion.h2
+            initial={{ opacity: 0, x: 100}}
+            whileInView={{ opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } }}
+            viewport={{ amount: .5 }}
+            className='filled-title'>Projects</motion.h2>
             <Projects />
             <div className='separator'></div>
-            <h2 className='outlined-title'>Skills</h2>
+            <motion.h2
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0, transition: { delay: 0.5, duration: 1 } }}
+            viewport={{ amount: .5 }}
+            className='outlined-title'>Skills</motion.h2>
             <Bio />
         </>
     );
