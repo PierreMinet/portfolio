@@ -1,13 +1,17 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: var(--main-gray);
   line-height: 1;
+}
+
+html {
+  background-color: var(--main-gray);
 }
 
 main {
   width: 80%;
   margin: auto;
+  background-color: var(--main-gray);
 }
 
 /* Colors */
@@ -15,6 +19,7 @@ main {
 :root {
   --main-gray: #111111;
   --main-white: #EAE2E2;
+  --main-blue: #5ec0e7;
 }
 
 .separator {
@@ -58,11 +63,9 @@ header img {
   background-color: transparent;
   max-width: 200px;
   height: auto;
-  margin-left: 50%;
-  transform: translateX(-50%);
 }
 
-h3 {
+h3, .h3-highlight {
   font-family: "Mohave", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -70,6 +73,11 @@ h3 {
   color: var(--main-white);
   font-size: 2.9em;
   margin-bottom: 2rem;
+}
+
+.h3-highlight {
+  margin-left: 10px;
+  color: var(--main-blue);
 }
 
 p {
@@ -116,14 +124,16 @@ nav ul {
   flex-direction: row;
   gap: 1rem;
   width: fit-content;
-  margin-left: 20%;
+  margin-left: 5%;
   background-color: transparent;
 }
 
 .nav-button {
-  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Palanquin", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
   color: var(--main-white);
   text-decoration: none;
@@ -138,6 +148,11 @@ nav ul {
 .nav-button:hover {
   color: var(--main-gray);
   background-color: var(--main-white);
+  cursor: pointer;
+}
+
+article .nav-button {
+  font-size: 1.2em;
 }
 
 article {
@@ -149,11 +164,77 @@ article {
   width: 100%;
 }
 
+h2 {
+  margin-bottom: 2rem;
+}
+
 .half-div {
   max-width: 50%;
 }
 
-/* footer {
+.card {
+  background-color: var(--main-white);
+  min-height: 450px;
+  max-width: 33%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card p {
+  color: var(--main-gray);
+}
+
+.bio {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.skills-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  background-color: var(--main-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  color: var(--main-gray);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: "Mohave", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+footer {
   min-height: 200px;
-  background-color: rgb(24, 61, 61);
-} */
+  background-color: #030303;
+  padding-top: 2rem;
+  display: flex;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.artwork-wrapper {
+  max-width: 450px;
+  max-height: 450px;
+}
+
+.artwork-wrapper img {
+  contain: content;
+  width: 100%;
+  height: auto;
+}
