@@ -216,8 +216,7 @@ h2 {
 
 footer {
   min-height: 200px;
-  background-color: #030303;
-  padding-top: 2rem;
+  background: linear-gradient(#000000, 2%, #030303);
   display: flex;
 }
 
@@ -231,6 +230,7 @@ footer div {
 .artwork-wrapper {
   max-width: 450px;
   max-height: 450px;
+  box-shadow: 10px 10px 10px #030303;
 }
 
 .artwork-wrapper img {

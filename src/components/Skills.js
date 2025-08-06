@@ -1,4 +1,4 @@
-import { FiBookmark, FiTrendingUp, FiTool } from "react-icons/fi";
+import { FiBookmark, FiTrendingUp, FiTool, FiAward  } from "react-icons/fi";
 import { motion } from "motion/react";
 
 const webSkills = [
@@ -39,7 +39,7 @@ const tools = [
     "Figma",
     "Bootstrap",
     "Formik",
-    "Yarn",
+    "Yulp",
     "Photoshop",
     "Premiere Pro",
     "After Effect",
@@ -69,7 +69,7 @@ const toolsDisplay = tools.map((tool) => {
 });
 
 const credentialsDisplay = credentials.map((tool) => {
-    return <div className="skill"><span>{tool}</span><span><FiTool /></span></div>
+    return <div className="skill"><span>{tool}</span><span><FiAward /></span></div>
 });
 
 function Skills() {
