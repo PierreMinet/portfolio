@@ -36,6 +36,16 @@ h1, h2 {
   line-height: 0.8;
 }
 
+h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.7em;
+  line-height: 0.8;
+  text-align: center;
+  margin-top: 1rem;
+}
+
 h1, h2, h3 {
   width: fit-content;
 }
@@ -128,27 +138,74 @@ nav ul {
   background-color: transparent;
 }
 
-.nav-button {
+.nav-button, .nav-button-dark {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Palanquin", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--main-white);
   text-decoration: none;
-  border: 2px solid var(--main-white);
   width: fit-content;
   padding: 0.5rem 1.5rem;
   border-radius: 25px;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   background-color: transparent;
+}
+
+.nav-button {
+  color: var(--main-white);
+  border: 2px solid var(--main-white);
+}
+
+.nav-button-dark {
+  color: var(--main-gray);
+  border: 2px solid var(--main-gray);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .nav-button:hover {
   color: var(--main-gray);
   background-color: var(--main-white);
   cursor: pointer;
+}
+
+.nav-button-dark:hover {
+  color: var(--main-white);
+  background-color: var(--main-gray);
+  cursor: pointer;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Palanquin", sans-serif;
+  background: linear-gradient(to top right, var(--main-blue), 30%, #980de9);
+  background-color: var(--main-gray);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.2em;
+  color: var(--main-white);
+  text-decoration: none;
+  border: 2px solid var(--main-gray);
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  transition-duration: 0.3s;
+  margin-top: 2rem;
+}
+
+.cta:hover {
+  color: var(--main-gray);
+  background: var(--main-white);
+}
+
+.cta span {
+  font-size: 1.3em;
 }
 
 article .nav-button {
@@ -174,15 +231,30 @@ h2 {
 
 .card {
   background-color: var(--main-white);
-  min-height: 450px;
-  max-width: 33%;
-  width: 25%;
+  min-height: 475px;
+  width: 375px;
   display: flex;
   flex-direction: column;
+  box-shadow: 10px 10px 10px #030303;
 }
 
 .card p {
   color: var(--main-gray);
+  font-size: 1.3em;
+  padding: 1rem;
+}
+
+.card-image-wrapper {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.card-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* transform: translateY(-20%); */
 }
 
 .bio {

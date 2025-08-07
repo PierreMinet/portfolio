@@ -79,7 +79,7 @@ function Skills() {
         style={{flexDirection:"column"}}>
             <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.5, duration: 3, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
                 <h3 style={{marginLeft:"auto", marginRight:"auto"}}>Skills related to web</h3>
                 <div className="skills-wrapper">
@@ -88,7 +88,7 @@ function Skills() {
             </motion.div>
             <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.5, duration: 3, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
                 <h3 style={{marginLeft:"auto", marginRight:"auto"}}>Skills I started learning / want to learn</h3>
                 <div className="skills-wrapper">
@@ -97,7 +97,7 @@ function Skills() {
             </motion.div>
             <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.5, duration: 3, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
                 <h3 style={{marginLeft:"auto", marginRight:"auto"}}>Other skills</h3>
                 <div className="skills-wrapper">
@@ -106,7 +106,7 @@ function Skills() {
             </motion.div>
             <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.5, duration: 3, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
                 <h3 style={{marginLeft:"auto", marginRight:"auto"}}>Tools</h3>
                 <div className="skills-wrapper">
@@ -115,7 +115,7 @@ function Skills() {
             </motion.div>
             <motion.div
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.5, duration: 3, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
                 <h3 style={{marginLeft:"auto", marginRight:"auto"}}>Credentials</h3>
                 <div className="skills-wrapper">

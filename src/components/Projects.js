@@ -1,19 +1,48 @@
+import Card from "./Card";
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
+import Project1 from '../images/projects/mangata-gallo.webp';
+import Project3 from '../images/projects/pierrem.webp';
+import { motion } from "motion/react";
+
+const featuredProjects = [
+    {
+        name: 'Mangata Gallo',
+        description: 'This is a mock-up website I made for my HTML/CSS exam during my Meta front-end developer course',
+        url: 'https://github.com/PierreMinet/mangata-gallo',
+        image: Project1,
+    },
+    {
+        name: 'Little Lemon Reservation',
+        description: 'This is my final exam task for my Meta front-end developer course, a basic table booking system for a fictional restaurant using React, Formik, Yulp, useReducer and a fake API call',
+        url: 'https://github.com/PierreMinet/little-lemon-book',
+        image: Project1,
+    },
+    {
+        name: 'My older website',
+        description: 'This is the previous version of this website, where I was featuring my designs only, using HTML, CSS, native JS, PHP, XML and MySQL',
+        url: 'https://pierrem-designs.be',
+        image: Project3,
+    },
+];
+
+const displayProjects = featuredProjects.map(project => {
+    return <Card key={project.name} display={project} />
+});
+
 function Projects() {
     return (
-        <article>
-            <div className="card">
-                <h4>My own website</h4>
-                <p>Bla bla bla</p>
+        <motion.article
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+        viewport={{ once:"true", amount: .5 }}
+        style={{ flexDirection:'column'}}>
+            <div style={{ display:'flex', flexWrap:'wrap', gap:'3rem'}}>
+                {displayProjects}
             </div>
-            <div className="card">
-                <h4>My own website</h4>
-                <p>Bla bla bla</p>
-            </div>
-            <div className="card">
-                <h4>My own website</h4>
-                <p>Bla bla bla</p>
-            </div>
-        </article>
+            <Link className="nav-button" to="/">Browse all projects
+                <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
+        </motion.article>
     );
 };
 

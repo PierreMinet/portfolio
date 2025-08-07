@@ -6,7 +6,7 @@ function Bio() {
         <>
         <motion.h3
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1, transition: { delay: 1, duration: 3, type: "tween" } }}
+        whileInView={{ opacity: 1, transition: { duration: 2, type: "tween" } }}
         viewport={{ once:"true", amount: .5 }}
          style={{marginLeft:"auto", marginRight:"auto", marginBottom:"2rem"}}>Who am I ?</motion.h3>
         <article className="bio">

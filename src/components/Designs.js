@@ -12,7 +12,7 @@ function Designs() {
         <motion.article
             style={{flexDirection:"column"}}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { delay: 0.2, duration: 1.5, type: "tween" } }}
+            whileInView={{ opacity: 1, transition: { duration: 1.5, type: "tween" } }}
             viewport={{ once:"true", amount: .5 }}>
             <div className="skills-wrapper" style={{gap:"2rem", marginBottom:"0.5rem"}}>
                 <div className="artwork-wrapper">
@@ -26,7 +26,8 @@ function Designs() {
                 </div>
             </div>
             <div>
-                <Link className="nav-button" to="/">Browse all designs<span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
+                <Link className="nav-button" to="/">Browse all designs
+                <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
             </div>
         </motion.article>
     );
