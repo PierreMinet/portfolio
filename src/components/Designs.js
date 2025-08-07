@@ -26,7 +26,7 @@ function Designs() {
                 </div>
             </div>
             <div>
-                <Link className="nav-button" to="/">Browse all designs
+                <Link className="nav-button" to="/designs">Browse all designs
                 <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
             </div>
         </motion.article>

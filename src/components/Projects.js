@@ -2,6 +2,7 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Project1 from '../images/projects/mangata-gallo.webp';
+import Project2 from '../images/projects/little-lemon.webp';
 import Project3 from '../images/projects/pierrem.webp';
 import { motion } from "motion/react";
 
@@ -16,7 +17,7 @@ const featuredProjects = [
         name: 'Little Lemon Reservation',
         description: 'This is my final exam task for my Meta front-end developer course, a basic table booking system for a fictional restaurant using React, Formik, Yulp, useReducer and a fake API call',
         url: 'https://github.com/PierreMinet/little-lemon-book',
-        image: Project1,
+        image: Project2,
     },
     {
         name: 'My older website',
@@ -40,7 +41,7 @@ function Projects() {
             <div style={{ display:'flex', flexWrap:'wrap', gap:'3rem'}}>
                 {displayProjects}
             </div>
-            <Link className="nav-button" to="/">Browse all projects
+            <Link className="nav-button" to="/projects">Browse all projects
                 <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
         </motion.article>
     );

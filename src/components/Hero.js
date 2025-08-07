@@ -11,7 +11,7 @@ function Hero() {
         className="hero-banner">
             <h1>Junior Front End Developer</h1>
             <h2>Graphic Designer</h2>
-            <Link className="cta" to="/">Discover my projects
+            <Link className="cta" to="/projects">Discover my projects
             <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
         </motion.article>
     );

@@ -5,8 +5,8 @@ function Nav() {
     return (
         <nav>
             <ul>
-                <Link className="nav-button" to="/">Projects</Link>
-                <Link className="nav-button" to="/">About</Link>
+                <Link className="nav-button" to="/projects">Projects</Link>
+                <Link className="nav-button" to="/contact">Contact</Link>
                 <a className="nav-button"
                 href="https://www.linkedin.com/in/pierre-minet-853450369"
                 rel="noreferrer"
