@@ -1,4 +1,5 @@
 import logo from '../images/logo.webp';
+import { BsFillPinMapFill } from "react-icons/bs";
 
 function Footer() {
     return (

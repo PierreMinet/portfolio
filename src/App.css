@@ -231,7 +231,7 @@ h2 {
 
 .card {
   background-color: var(--main-white);
-  min-height: 475px;
+  min-height: 500px;
   width: 375px;
   display: flex;
   flex-direction: column;
@@ -254,7 +254,36 @@ h2 {
   width: 100%;
   height: auto;
   object-fit: cover;
-  /* transform: translateY(-20%); */
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  margin-top: 15px;
+  padding: 1rem 1.5rem 1rem 1rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: var(--main-white);
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.status-icon {
+  margin-left: 5px;
+  font-size: 1.2em;
+  transform: translateY(1.5px);
+}
+
+.released {
+  background-color: #08a72a;
+}
+
+.in-dev {
+  background: linear-gradient(to top right, var(--main-blue), 30%, #980de9);
 }
 
 .bio {
