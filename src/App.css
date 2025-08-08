@@ -20,6 +20,7 @@ main {
   --main-gray: #111111;
   --main-white: #EAE2E2;
   --main-blue: #5ec0e7;
+  --secondary-blue: #3d90b1;
 }
 
 .separator {
@@ -191,7 +192,7 @@ nav ul {
   font-size: 1.2em;
   color: var(--main-white);
   text-decoration: none;
-  border: 2px solid var(--main-gray);
+  border: 2px solid var(--secondary-blue);
   width: fit-content;
   padding: 1rem 2rem;
   border-radius: 25px;
@@ -202,6 +203,7 @@ nav ul {
 .cta:hover {
   color: var(--main-gray);
   background: var(--main-white);
+  filter: none;
 }
 
 .cta span {
@@ -279,11 +281,17 @@ h2 {
 }
 
 .released {
-  background-color: #08a72a;
+  background: linear-gradient(to top right, #08a72a, 30%, #6ab608);
+  border-top: 2px solid #2bdb51;
+  border-right: 2px solid #2bdb51;
+  border-bottom: 2px solid #2bdb51;
 }
 
 .in-dev {
   background: linear-gradient(to top right, var(--main-blue), 30%, #980de9);
+  border-top: 2px solid var(--secondary-blue);
+  border-right: 2px solid var(--secondary-blue);
+  border-bottom: 2px solid var(--secondary-blue);
 }
 
 .bio {
