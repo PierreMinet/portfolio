@@ -7,6 +7,7 @@ import GroceryApp from '../images/projects/grocery-app.webp';
 import PhpLogin from '../images/projects/php-login.webp';
 import Neverland from '../images/projects/neverland.webp';
 import DarkOrbit from '../images/projects/darkorbit.webp';
+import Portfolio from '../images/projects/portfolio.webp';
 
 const webProjects = [
     {
@@ -21,6 +22,13 @@ const webProjects = [
         description: 'This is my final exam task for my Meta front-end developer course, a basic table booking system for a fictional restaurant using React, Formik, Yulp, useReducer and a fake API call.',
         url: 'https://github.com/PierreMinet/little-lemon-book',
         image: LittleLemon,
+        released: true,
+    },
+    {
+        name: 'React Portfolio',
+        description: 'The website you are actually browsing, made with React JS and a few React dependencies, I am planning to extend it with Laravel in the future, source code is available on GitHub !',
+        url: 'https://github.com/PierreMinet/portfolio',
+        image: Portfolio,
         released: true,
     },
     {
@@ -96,7 +104,7 @@ function ProjectPage() {
             <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0, transition: { duration: 1 } }}
-            viewport={{ once:"true", amount: .2 }}
+            viewport={{ once:"true", amount: .1 }}
             style={{ display:'flex', flexWrap:'wrap', gap:'3rem', justifyContent:'center'}}>
                 {displayWebProjects}
             </motion.div>
