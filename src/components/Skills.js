@@ -53,23 +53,23 @@ const credentials = [
 ];
 
 const webSkillsDisplay = webSkills.map((skill) => {
-    return <div className="skill"><span>{skill}</span><span><FiBookmark /></span></div>
+    return <div className="skill" key={skill}><span>{skill}</span><span><FiBookmark /></span></div>
 });
 
 const learnSkillsDisplay = learnSkills.map((skill) => {
-    return <div className="skill"><span>{skill}</span><span><FiTrendingUp /></span></div>
+    return <div className="skill" key={skill}><span>{skill}</span><span><FiTrendingUp /></span></div>
 });
 
 const otherSkillsDisplay = otherSkills.map((skill) => {
-    return <div className="skill"><span>{skill}</span><span><FiBookmark /></span></div>
+    return <div className="skill" key={skill}><span>{skill}</span><span><FiBookmark /></span></div>
 });
 
 const toolsDisplay = tools.map((tool) => {
-    return <div className="skill"><span>{tool}</span><span><FiTool /></span></div>
+    return <div className="skill" key={tool}><span>{tool}</span><span><FiTool /></span></div>
 });
 
 const credentialsDisplay = credentials.map((tool) => {
-    return <div className="skill"><span>{tool}</span><span><FiAward /></span></div>
+    return <div className="skill" key={tool}><span>{tool}</span><span><FiAward /></span></div>
 });
 
 function Skills() {

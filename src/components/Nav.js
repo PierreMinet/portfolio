@@ -5,17 +5,17 @@ function Nav() {
     return (
         <nav>
             <ul>
-                <Link className="nav-button" to="/projects">Projects</Link>
-                <Link className="nav-button" to="/contact">Contact</Link>
-                <a className="nav-button"
+                <Link key="Projects" className="nav-button" to="/projects">Projects</Link>
+                <Link key="Contact" className="nav-button" to="/contact">Contact</Link>
+                <a key="Linkedin" className="nav-button"
                 href="https://www.linkedin.com/in/pierre-minet-853450369"
                 rel="noreferrer"
                 target="_blank"><span style={{fontSize:"1.2rem"}}><AiFillLinkedin /></span></a>
-                <a className="nav-button"
+                <a key="Instagram" className="nav-button"
                 href="https://www.instagram.com/pierrem.designs"
                 rel="noreferrer"
                 target="_blank"><span style={{fontSize:"1.2rem"}}><AiFillInstagram /></span></a>
-                <a className="nav-button"
+                <a key="GitHub" className="nav-button"
                 href="https://github.com/PierreMinet"
                 rel="noreferrer"
                 target="_blank"><span style={{fontSize:"1.2rem"}}><AiFillGithub /></span></a>
