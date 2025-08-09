@@ -332,8 +332,40 @@ footer {
 footer div {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 50%;
+}
+
+h5 {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+.footer-list {
+  display: flex;
+  gap: 2rem;
+}
+
+footer ul {
+  color: var(--main-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-link, footer p {
+  text-decoration: none;
+  color: var(--main-white);
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+.footer-link:hover {
+  color: var(--main-blue);
 }
 
 .artwork-wrapper {
