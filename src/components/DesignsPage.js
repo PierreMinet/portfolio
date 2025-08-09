@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import ArtworksGallery from "./ArtworksGallery";
 import Artwork1 from "../images/artworks/artwork30.webp";
 import Artwork2 from "../images/artworks/artwork37.webp";
 import Artwork3 from "../images/artworks/artwork38.webp";
@@ -19,7 +20,7 @@ function DesignsPage() {
 
             <div className='separator'></div>
 
-            <motion.article
+            {/* <motion.article
             style={{flexDirection:"column"}}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1.5, type: "tween" } }}
@@ -35,7 +36,9 @@ function DesignsPage() {
                         <img src={Artwork3} width={imgSize} height={imgSize} alt="Artwork 3" />
                     </div>
                 </div>
-            </motion.article>
+            </motion.article> */}
+
+            <ArtworksGallery />
         </>
     );
 };

@@ -77,6 +77,12 @@ header img {
   height: auto;
 }
 
+header div {
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+}
+
 h3, .h3-highlight {
   font-family: "Mohave", sans-serif;
   font-optical-sizing: auto;
@@ -116,6 +122,7 @@ header {
   display: flex;
   padding: 0.5rem 0;
   align-items: center;
+  justify-content: center;
   position: sticky;
   top: 0px;
   z-index: 1000;
@@ -125,9 +132,9 @@ header {
 }
 
 nav {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: fit-content;
+  /* margin-left: auto;
+  margin-right: auto; */
   background-color: transparent;
 }
 
@@ -136,7 +143,6 @@ nav ul {
   flex-direction: row;
   gap: 1rem;
   width: fit-content;
-  margin-left: 5%;
   background-color: transparent;
 }
 
@@ -379,4 +385,44 @@ footer ul {
   contain: content;
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1300px) {
+  header, article {
+    flex-direction: column;
+  }
+
+  nav, nav ul {
+    margin: 0;
+    width: fit-content;
+  }
+
+  header img {
+    margin: auto;
+  }
+
+  article, article div {
+    width: 95%;
+    margin: auto;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  .half-div {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .half-div div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .half-div img {
+    margin: auto;
+  }
 }
