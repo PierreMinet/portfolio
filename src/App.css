@@ -12,6 +12,7 @@ main {
   width: 80%;
   margin: auto;
   background-color: var(--main-gray);
+  min-height: 60vh;
 }
 
 /* Colors */
