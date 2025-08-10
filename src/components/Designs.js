@@ -4,10 +4,13 @@ import Artwork3 from "../images/artworks/artwork38.webp";
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { motion } from "motion/react";
+import { useContext } from "react";
+import MenuContext from "../context/MenuContext";
 
 const imgSize = 450;
 
 function Designs() {
+    const { setMenuVisible } = useContext(MenuContext);
     return (
         <motion.article
             style={{flexDirection:"column"}}
@@ -26,7 +29,10 @@ function Designs() {
                 </div>
             </div>
             <div>
-                <Link className="nav-button" to="/designs" style={{margin:"auto"}}>Browse all designs
+                <Link
+                className="nav-button"
+                onClick={() => setMenuVisible(false)}
+                to="/designs" style={{margin:"auto"}}>Browse all designs
                 <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
             </div>
         </motion.article>

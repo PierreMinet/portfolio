@@ -1,8 +1,11 @@
 import logo from '../images/logo.webp';
 import { BsFillPinMapFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import MenuContext from '../context/MenuContext';
 
 function Footer() {
+    const { setMenuVisible } = useContext(MenuContext);
     return (
         <footer>
             <div style={{alignItems:"center"}}>
@@ -11,24 +14,27 @@ function Footer() {
             <div className='footer-list'>
                 <ul>
                     <h5 key="Navigation">Navigation</h5>
-                    <Link key="Home" className="footer-link" to="/">Home</Link>
-                    <Link key="Projects" className="footer-link" to="/projects">Projects</Link>
-                    <Link key="Designs" className="footer-link" to="/designs">Designs</Link>
-                    <Link key="Contact" className="footer-link" to="/contact">Contact</Link>
+                    <Link key="Home" className="footer-link" to="/" onClick={() => setMenuVisible(false)}>Home</Link>
+                    <Link key="Projects" className="footer-link" to="/projects" onClick={() => setMenuVisible(false)}>Projects</Link>
+                    <Link key="Designs" className="footer-link" to="/designs" onClick={() => setMenuVisible(false)}>Designs</Link>
+                    <Link key="Contact" className="footer-link" to="/contact" onClick={() => setMenuVisible(false)}>Contact</Link>
                 </ul>
                 <ul>
                     <h5 key="Socials">Socials</h5>
                     <a key="Linkedin" className="footer-link"
                     href="https://www.linkedin.com/in/pierre-minet-853450369"
                     rel="noreferrer"
+                    onClick={() => setMenuVisible(false)}
                     target="_blank">Linkedin</a>
                     <a key="Instagram" className="footer-link"
                     href="https://www.instagram.com/pierrem.designs"
                     rel="noreferrer"
+                    onClick={() => setMenuVisible(false)}
                     target="_blank">Instagram</a>
                     <a key="GitHub" className="footer-link"
                     href="https://github.com/PierreMinet"
                     rel="noreferrer"
+                    onClick={() => setMenuVisible(false)}
                     target="_blank">GitHub</a>
                 </ul>
                 <ul>

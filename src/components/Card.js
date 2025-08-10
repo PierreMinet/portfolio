@@ -3,8 +3,11 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import { BsXCircleFill } from "react-icons/bs";
 import { BsDiscord } from "react-icons/bs";
 import { BsHammer } from "react-icons/bs";
+import { useContext } from "react";
+import MenuContext from "../context/MenuContext";
 
 function Card(props) {
+    const { setMenuVisible } = useContext(MenuContext);
     return (
         <div className="card">
             <div className="card-image-wrapper">
@@ -16,6 +19,7 @@ function Card(props) {
             <a className="nav-button-dark"
                 href={props.display.url}
                 rel="noreferrer"
+                onClick={() => setMenuVisible(false)}
                 target="_blank">View project<span style={{ marginLeft:'0.25rem' ,transform:'translateY(2.5px)'}}><AiOutlineArrowRight /></span>
             </a> ) : null }
             {props.display.released ? (
