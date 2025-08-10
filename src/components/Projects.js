@@ -5,6 +5,8 @@ import Project1 from '../images/projects/mangata-gallo.webp';
 import Project2 from '../images/projects/little-lemon.webp';
 import Project3 from '../images/projects/pierrem.webp';
 import { motion } from "motion/react";
+import { useContext } from "react";
+import MenuContext from "../context/MenuContext";
 
 const featuredProjects = [
     {
@@ -35,6 +37,9 @@ const displayProjects = featuredProjects.map(project => {
 });
 
 function Projects() {
+
+    const { setMenuVisible } = useContext(MenuContext);
+
     return (
         <motion.article
         initial={{ opacity: 0, y: 50 }}
@@ -44,7 +49,7 @@ function Projects() {
             <div style={{ display:'flex', flexWrap:'wrap', gap:'3rem'}}>
                 {displayProjects}
             </div>
-            <Link className="nav-button" to="/projects">Browse all projects
+            <Link className="nav-button" to="/projects" onClick={() => setMenuVisible(false)}>Browse all projects
                 <span style={{marginLeft:"0.2rem", transform:"translateY(2.5px)"}}><AiOutlineArrowRight /></span></Link>
         </motion.article>
     );

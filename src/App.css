@@ -133,8 +133,6 @@ header {
 
 nav {
   width: fit-content;
-  /* margin-left: auto;
-  margin-right: auto; */
   background-color: transparent;
 }
 
@@ -166,6 +164,28 @@ nav ul {
   border: 2px solid var(--main-white);
 }
 
+.nav-burger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem;
+  border: 2px solid var(--main-white);
+  background-color: transparent;
+  color: var(--main-white);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.burger-nav {
+  display: none;
+}
+
+.nav-burger-active {
+  color: var(--main-gray);
+  background-color: var(--main-white);
+}
+
 .nav-button-dark {
   color: var(--main-gray);
   border: 2px solid var(--main-gray);
@@ -185,6 +205,11 @@ nav ul {
   color: var(--main-white);
   background-color: var(--main-gray);
   cursor: pointer;
+}
+
+.burger-link {
+  text-decoration: none;
+  color: var(--main-gray);
 }
 
 .cta {
@@ -334,6 +359,7 @@ footer {
   min-height: 200px;
   background: linear-gradient(#000000, 2%, #030303);
   display: flex;
+  padding: 2rem;
 }
 
 footer div {
@@ -353,6 +379,7 @@ h5 {
 .footer-list {
   display: flex;
   gap: 2rem;
+  padding-top: 3rem;
 }
 
 footer ul {
@@ -424,5 +451,71 @@ footer ul {
 
   .half-div img {
     margin: auto;
+  }
+
+  h1, h2, h3, h4, h5, p, footer a, span {
+    text-size-adjust: 85%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p, footer a, span {
+    text-size-adjust: 75%;
+  }
+
+  h1, h2, h3, h4, h5 {
+    text-size-adjust: 60%;
+  }
+
+  .default-nav {
+    display: none;
+  }
+
+  .card {
+    min-height: 375px;
+  }
+
+  article img {
+    width: 80%;
+    height: auto;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.2rem;
+  }
+
+  footer div {
+    width: 100%;
+  }
+
+  .footer-list {
+    padding-top: 0;
+  }
+
+  footer img {
+    width: 60%;
+    height: auto;
+  }
+
+  .burger-nav {
+    flex-direction: column;
+    background-color: var(--main-white);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: absolute;
+    transform: translateX(-32%);
+    box-shadow: 0 10px 15px var(--main-gray);
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .nav-burger {
+    display: flex;
   }
 }

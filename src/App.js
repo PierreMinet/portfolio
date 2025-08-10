@@ -5,11 +5,15 @@ import Footer from './components/Footer.js';
 import ProjectPage from './components/ProjectsPage.js';
 import DesignsPage from './components/DesignsPage.js';
 import Contact from './components/Contact.js';
+import MenuContext from './context/MenuContext.js';
 import { Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 
 function App() {
+  const [menuVisible, setMenuVisible] = useState(false);
+
   return (
-    <>
+    <MenuContext.Provider value={{menuVisible, setMenuVisible}}>
       <Header />
       <main>
         <Routes>
@@ -20,7 +24,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
-    </>
+    </MenuContext.Provider>
   );
 }
 

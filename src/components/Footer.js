@@ -8,7 +8,7 @@ function Footer() {
             <div style={{alignItems:"center"}}>
                 <img src={logo} width={300} height={150} alt="Logo" />
             </div>
-            <div className='footer-list' style={{paddingTop:"3rem"}}>
+            <div className='footer-list'>
                 <ul>
                     <h5 key="Navigation">Navigation</h5>
                     <Link key="Home" className="footer-link" to="/">Home</Link>
