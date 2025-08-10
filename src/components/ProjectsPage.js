@@ -41,7 +41,7 @@ const webProjects = [
     {
         name: 'PHP Basic Login / Register',
         description: 'This is a small really basic login / register system in native PHP, using client side and server side validation, secured against SQL injections. This is currently working, but can be modified at any time.',
-        url: 'https://pierrem-designs.be',
+        url: 'https://github.com/PierreMinet/php-register-login',
         image: PhpLogin,
         released: true,
     },
