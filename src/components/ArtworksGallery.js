@@ -21,9 +21,11 @@ function ArtworksGallery() {
             viewport={{ once:"true", amount: .5 }}>
             <div className="skills-wrapper" style={{gap:"2rem", marginBottom:"0.5rem"}}>
                 {images.map((img, index) => {
+                    return (
                     <div className="artwork-wrapper">
                         <img src={img.src} width={imgSize} height={imgSize} alt={img.alt} loading="lazy" />
                     </div>
+                    );
                 })}
             </div>
         </motion.article>
