@@ -12,28 +12,28 @@ import Portfolio from '../images/projects/portfolio.webp';
 const webProjects = [
     {
         name: 'Mangata Gallo',
-        description: 'A mock-up website I made for my HTML/CSS exam during my Meta front-end developer course.',
+        description: 'This is a mock-up website I created for my HTML/CSS exam during my Meta Front-End Developer course.',
         url: 'https://github.com/PierreMinet/mangata-gallo',
         image: MangataGallo,
         released: true,
     },
     {
         name: 'Little Lemon Reservation',
-        description: 'This is my final exam task for my Meta front-end developer course, a basic table booking system for a fictional restaurant using React, Formik, Yulp, useReducer and a fake API call.',
+        description: 'This is my final exam task for my Meta Front-End Developer course : a basic table booking system for a fictional restaurant using React, Formik, Yulp, useReducer and a fake API call.',
         url: 'https://github.com/PierreMinet/little-lemon-book',
         image: LittleLemon,
         released: true,
     },
     {
         name: 'React Portfolio',
-        description: 'The website you are actually browsing, made with React JS and a few React dependencies, I am planning to extend it with Laravel in the future, source code is available on GitHub !',
+        description: 'The website you are currently browsing, made with React JS and a few React dependencies, I plan to extend it with Laravel in the future. The source code is available on GitHub !',
         url: 'https://github.com/PierreMinet/portfolio',
         image: Portfolio,
         released: true,
     },
     {
         name: 'My older website',
-        description: 'This is the previous version of this website, where I was featuring my designs only, using HTML, CSS, native JS, PHP, XML and MySQL.',
+        description: 'This is the previous version of this website, where I featured my designs only, using HTML, CSS, native JS, PHP, XML and MySQL.',
         url: 'https://pierrem-designs.be',
         image: PierreDesigns,
         released: true,
@@ -47,14 +47,14 @@ const webProjects = [
     },
     {
         name: 'Grocery App',
-        description: "A small digital grocery list I'm currently working on, the first version was in Native JS / HTML / PHP, but I am planning on switching it to React JS / Laravel instead.",
+        description: "A small digital grocery list I'm currently working on. The first version was in native JS / HTML / PHP, but I am planning to switch it to React JS / Laravel instead.",
         url: 'https://pierrem-designs.be',
         image: GroceryApp,
         released: false,
     },
     {
         name: 'Neverland Records',
-        description: "The website for a record label called Neverland Records, I am mostly working on the interface and not the backend part of it.",
+        description: "The website for a record label called Neverland Records ; I am mostly working on the interface and not the backend part of it.",
         url: 'https://pierrem-designs.be',
         image: Neverland,
         released: false,
@@ -64,7 +64,7 @@ const webProjects = [
 const otherProjects = [
     {
         name: 'DarkOrbit Classic (GML)',
-        description: "My biggest project so far : re-creating the browser game DarkOrbit in its 2009 state using Game Maker Studio ! Check the discord server for updates !",
+        description: "My biggest project so far : re-creating the browser game DarkOrbit in its 2009 state using Game Maker Studio ! Check the Discord server for updates !",
         url: 'https://pierrem-designs.be',
         image: DarkOrbit,
         released: false,

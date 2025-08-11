@@ -22,9 +22,12 @@ function ArtworksGallery() {
             <div className="skills-wrapper" style={{gap:"2rem", marginBottom:"0.5rem"}}>
                 {images.map((img, index) => {
                     return (
-                    <div className="artwork-wrapper">
+                    <motion.div className="artwork-wrapper"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: 2, type: "tween" } }}
+                    viewport={{ once:"true", amount: .2 }}>
                         <img src={img.src} width={imgSize} height={imgSize} alt={img.alt} loading="lazy" />
-                    </div>
+                    </motion.div>
                     );
                 })}
             </div>
