@@ -159,6 +159,31 @@ nav ul {
   background-color: transparent;
 }
 
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1em;
+  text-decoration: none;
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-white);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid transparent;
+}
+
+.button-highlight {
+  color: var(--main-blue);
+  border-bottom: 2px solid var(--main-blue);
+}
+
 .nav-button {
   color: var(--main-white);
   border: 2px solid var(--main-white);

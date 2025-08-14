@@ -1,12 +1,17 @@
 import { motion } from "motion/react";
 import ArtworksGallery from "./ArtworksGallery";
-import Artwork1 from "../images/artworks/artwork30.webp";
-import Artwork2 from "../images/artworks/artwork37.webp";
-import Artwork3 from "../images/artworks/artwork38.webp";
-
-const imgSize = 450;
+import { useContext } from "react";
+import GalleryContext from "../context/GalleryContext";
+import GalleryNav from "./GalleryNav";
 
 function DesignsPage() {
+const { galleryVisible } = useContext(GalleryContext);
+const galleries = {
+    artworks: <ArtworksGallery />,
+    covers: <ArtworksGallery />,
+    socials: <ArtworksGallery />,
+}
+
     return (
         <>
             <motion.article
@@ -18,27 +23,10 @@ function DesignsPage() {
                 <h2>Artworks and more</h2>
             </motion.article>
 
+            <GalleryNav />
+
             <div className='separator'></div>
-
-            {/* <motion.article
-            style={{flexDirection:"column"}}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, transition: { duration: 1.5, type: "tween" } }}
-            viewport={{ once:"true", amount: .5 }}>
-                <div className="skills-wrapper" style={{gap:"2rem", marginBottom:"0.5rem"}}>
-                    <div className="artwork-wrapper">
-                        <img src={Artwork1} width={imgSize} height={imgSize} alt="Artwork 1" />
-                    </div>
-                    <div className="artwork-wrapper">
-                        <img src={Artwork2} width={imgSize} height={imgSize} alt="Artwork 2" />
-                    </div>
-                    <div className="artwork-wrapper">
-                        <img src={Artwork3} width={imgSize} height={imgSize} alt="Artwork 3" />
-                    </div>
-                </div>
-            </motion.article> */}
-
-            <ArtworksGallery />
+            {galleries[galleryVisible] || <h3>Invalid folder</h3>}
         </>
     );
 };
