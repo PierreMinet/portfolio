@@ -1,16 +1,8 @@
 import { motion } from "motion/react";
 import ArtworksGallery from "./ArtworksGallery";
-import { useContext } from "react";
-import GalleryContext from "../context/GalleryContext";
 import GalleryNav from "./GalleryNav";
 
 function DesignsPage() {
-const { galleryVisible } = useContext(GalleryContext);
-const galleries = {
-    artworks: <ArtworksGallery />,
-    covers: <ArtworksGallery />,
-    socials: <ArtworksGallery />,
-}
 
     return (
         <>
@@ -25,8 +17,7 @@ const galleries = {
 
             <GalleryNav />
 
-            <div className='separator'></div>
-            {galleries[galleryVisible] || <h3>Invalid folder</h3>}
+            <ArtworksGallery />
         </>
     );
 };
