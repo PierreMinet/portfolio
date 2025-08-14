@@ -21,6 +21,7 @@ function ArtworksGallery() {
             style={{flexDirection:"column"}}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1.5, type: "tween" } }}
+            style={{marginBottom:"2rem"}}
             viewport={{ once:"true", amount: .5 }}>
             <div className="skills-wrapper" style={{gap:"2rem", marginBottom:"0.5rem"}}>
                 {images.map((img, index) => {
