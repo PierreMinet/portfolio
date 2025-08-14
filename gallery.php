@@ -1,7 +1,15 @@
 <?php
     header('Content-Type: application/json');
 
-    $files = glob("artworks/*.{jpg,jpeg,png,webp}", GLOB_BRACE);
+    $folder = $_GET['folder'] ?? 'artworks';
+    $allowed_folders = ['artworks', 'covers', 'socials'];
+
+    if (!in_array($folder, $allowed_folders)) {
+        echo json_encode([]);
+        exit;
+    }
+
+    $files = glob("$folder/*.{jpg,jpeg,png,webp}", GLOB_BRACE);
     $images = [];
 
     foreach ($files as $file) {

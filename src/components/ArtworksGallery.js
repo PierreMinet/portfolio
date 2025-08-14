@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { useContext } from "react";
+import GalleryContext from "../context/GalleryContext";
 
 const imgSize = 450;
 
 function ArtworksGallery() {
     const [images, setImages] = useState([]);
+    const { galleryVisible } = useContext(GalleryContext);
 
     useEffect(() => {
-        fetch("/gallery.php")
+        fetch(`/gallery.php?folder=${galleryVisible}`)
         .then(res => res.json())
         .then(data => setImages(data))
         .catch(err => console.error(err));
-    }, []);
+    }, [galleryVisible]);
 
     return (
         <motion.article
