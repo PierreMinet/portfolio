@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Form from "./Form";
 
 function Contact() {
     return (
@@ -23,6 +24,7 @@ function Contact() {
                     <p>A contact form will be available <b>soon</b></p>
                 </div>
             </motion.article>
+            <Form />
         </>
     );
 };

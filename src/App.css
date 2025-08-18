@@ -439,6 +439,60 @@ footer ul {
   height: auto;
 }
 
+label {
+  font-family: "Mohave", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--main-white);
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+::placeholder {
+  font-family: "Mohave", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: italic;
+  color: #a3a3a3;
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+form {
+  display: flex;
+  color: var(--main-white);
+  flex-direction: column;
+  width: 60%;
+  gap: 2rem;
+}
+
+input, textarea {
+  background-color: var(--main-gray);
+  padding: 1.2rem;
+  border-radius: 30px;
+  color: var(--main-white);
+  border: 2px solid var(--main-white);
+  transition-duration: 0.3s;
+}
+
+input:focus, textarea:focus {
+  background-color: var(--main-white);
+  color: var(--main-gray);
+}
+
+input:hover:not(:focus), textarea:hover:not(:focus) {
+  background-color: #252525;
+  color: var(--main-gray);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  gap: 0.5rem;
+}
+
 @media screen and (max-width: 1300px) {
   header, article {
     flex-direction: column;
