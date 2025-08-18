@@ -21,7 +21,7 @@ function Contact() {
                 <div style={{textAlign:"center"}}>
                     <p>For any <b>question</b>, <b>inquiry</b>, <b>offer</b> or <b>custom project</b>, please reach me by e-mail :</p>
                     <p>pierrem.designs@gmail.com</p>
-                    <p>A contact form will be available <b>soon</b></p>
+                    <p style={{marginTop:"3rem"}}>Or use the following <b>contact form</b> :</p>
                 </div>
             </motion.article>
             <Form />

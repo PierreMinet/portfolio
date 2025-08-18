@@ -455,7 +455,6 @@ label {
   font-weight: 100;
   font-style: italic;
   color: #a3a3a3;
-  font-size: 1.6em;
   line-height: 1;
 }
 
@@ -474,16 +473,28 @@ input, textarea {
   color: var(--main-white);
   border: 2px solid var(--main-white);
   transition-duration: 0.3s;
+  font-family: "Mohave", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  color: var(--main-white);
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+textarea {
+  min-height: 10rem;
 }
 
 input:focus, textarea:focus {
   background-color: var(--main-white);
   color: var(--main-gray);
+  border: 2px solid var(--main-white);
 }
 
 input:hover:not(:focus), textarea:hover:not(:focus) {
   background-color: #252525;
-  color: var(--main-gray);
+  color: var(--main-white);
 }
 
 fieldset {
