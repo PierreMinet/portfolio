@@ -447,6 +447,12 @@ label {
   color: var(--main-white);
   font-size: 1.6em;
   line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+label span {
+  margin-left: 1rem;
 }
 
 ::placeholder {
@@ -463,7 +469,7 @@ form {
   color: var(--main-white);
   flex-direction: column;
   width: 60%;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 input, textarea {
@@ -490,6 +496,19 @@ input:focus, textarea:focus {
   background-color: var(--main-white);
   color: var(--main-gray);
   border: 2px solid var(--main-white);
+}
+
+.invalid-field {
+  border: 2px solid red;
+}
+
+.invalid-field::placeholder, .error {
+  color: red;
+}
+
+.error {
+  font-style: italic;
+  font-size: 0.8em;
 }
 
 input:hover:not(:focus), textarea:hover:not(:focus) {
