@@ -40,13 +40,31 @@ function Form() {
             mail: "",
             message: "",
         },
-        onSubmit: values => {
+        onSubmit: async (values, { resetForm, setSubmitting }) => {
+            console.log("Form datas sent");
+            console.log(`First name : ${values.firstName}, Last name : ${values.lastName}, Email : ${values.mail}, Comment : ${values.message}`)
+            try {
+                const res = await fetch('/form.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(values),
+                })
+
+                if (!res.ok) {
+                    throw new Error('Server rejected the request');
+                }
+
+                formik.resetForm();
+            } catch (err) {
+            } finally {
+                setSubmitting(false);
+            }
         },
         validationSchema: Yup.object({
             firstName: Yup.string().required("Required"),
             lastName: Yup.string().required("Required"),
             mail: Yup.string().required("Required").email("Invalid e-mail format"),
-            message: Yup.string().required("Required").min(25, "Your message must be at least 25 characters long"),
+            message: Yup.string().required("Required").min(20, "Your message must be at least 20 characters long"),
         }),
     });
 
@@ -54,7 +72,7 @@ function Form() {
         const Component = field.inputType === "input" ? "input" : "textarea";
 
         return (
-        <fieldset>
+        <fieldset key={field.name}>
             <label htmlFor={field.name}>
                 {field.label}
                 <span>{formik.touched[field.name] && formik.errors[field.name] && (
@@ -68,7 +86,7 @@ function Form() {
                 type={field.type}
                 onBlur={formik.handleBlur}
                 onChange={formik.handleChange}
-                defaultValue={formik.values[field.name]}
+                value={formik.values[field.name]}
                 required
                 className={formik.touched[field.name] && formik.errors[field.name] ? ("invalid-field") : ("")}
             />
@@ -80,7 +98,7 @@ function Form() {
         <article>
             <form onSubmit={formik.handleSubmit}>
                 {displayFields}
-                <button type="submit" aria-label="Submit contact form" style={{margin:"auto"}} className='cta'>Confirm</button>
+                <button type="submit" aria-label="Submit contact form" style={{marginLeft:"auto", marginRight:"auto", marginTop:"auto", marginBottom:"2rem"}} className='cta'>Confirm</button>
             </form>
         </article>
     );
