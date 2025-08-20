@@ -45,10 +45,29 @@ if ($conn->connect_error) {
 
 // Retrieve datas from the decoded json and sanitize them
 
-$firstName = $data['firstName'] ?? '';
-$lastName  = $data['lastName'] ?? '';
-$mail      = $data['mail'] ?? '';
-$message   = $data['message'] ?? '';
+$firstName = trim($data['firstName'] ?? '');
+$lastName  = trim($data['lastName'] ?? '');
+$mail      = trim($data['mail'] ?? '');
+$message   = trim($data['message'] ?? '');
+
+
+// Check fields
+
+if (!$firstName || !$lastName || !$mail || !$message) {
+    http_response_code(400);
+    echo json_encode(['error' => 'All fields are required']);
+    exit;
+}
+
+
+// Check if the mail address is a valid one
+
+if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid email address']);
+    exit;
+}
+
 
 
 // Convert all values to strings to prevent safety issues

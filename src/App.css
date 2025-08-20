@@ -499,11 +499,11 @@ input:focus, textarea:focus {
 }
 
 .invalid-field {
-  border: 2px solid red;
+  border: 2px solid #da2c2c;
 }
 
 .invalid-field::placeholder, .error {
-  color: red;
+  color: #da2c2c;
 }
 
 .error {
@@ -521,6 +521,23 @@ fieldset {
   flex-direction: column;
   border: none;
   gap: 0.5rem;
+}
+
+.error-popup, .success-popup {
+  width: 55%;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+}
+
+.error-popup {
+  background-color: #da2c2c;
+}
+
+.success-popup {
+  background-color: #08a72a;
 }
 
 @media screen and (max-width: 1300px) {

@@ -1,4 +1,5 @@
 import { useFormik } from "formik";
+import { useState, useEffect } from "react";
 import * as Yup from 'yup';
 
 const formFields = [
@@ -19,7 +20,7 @@ const formFields = [
     {
         label: "E-mail Address",
         placeholder: "Your e-mail address",
-        type: "mail",
+        type: "email",
         inputType: "input",
         name: "mail",
     },
@@ -33,6 +34,13 @@ const formFields = [
 ];
 
 function Form() {
+    const [serverMessage, setServerMessage] = useState(null);
+    useEffect(() => {
+    if (serverMessage) {
+        const timer = setTimeout(() => setServerMessage(null), 4000);
+        return () => clearTimeout(timer);
+    }
+}, [serverMessage]);
     const formik = useFormik({
         initialValues: {
             firstName: "",
@@ -50,12 +58,17 @@ function Form() {
                     body: JSON.stringify(values),
                 })
 
-                if (!res.ok) {
-                    throw new Error('Server rejected the request');
+                if (res.ok) {
+                    setServerMessage({ type: "success", text: "Message sent successfully!" });
+                    resetForm();
+                } else {
+                    const error = await res.json();
+                    setServerMessage({ type: "error", text: error.error });
+                    console.error(error.error);
                 }
-
-                formik.resetForm();
             } catch (err) {
+                console.error("Network error", err);
+                setServerMessage({ type: "error", text: "Something went wrong. Please try again later." });
             } finally {
                 setSubmitting(false);
             }
@@ -95,12 +108,27 @@ function Form() {
     });
 
     return (
-        <article>
-            <form onSubmit={formik.handleSubmit}>
-                {displayFields}
-                <button type="submit" aria-label="Submit contact form" style={{marginLeft:"auto", marginRight:"auto", marginTop:"auto", marginBottom:"2rem"}} className='cta'>Confirm</button>
-            </form>
-        </article>
+        <>
+            {serverMessage && (
+                <p role="alert" className={serverMessage.type === "error" ? "error-popup" : "success-popup"}>
+                    {serverMessage.text}
+                </p>
+            )}
+            <article>
+                <form onSubmit={formik.handleSubmit}>
+                    {displayFields}
+                    <button
+                    type="submit"
+                    aria-label="Submit contact form"
+                    style={{marginLeft:"auto", marginRight:"auto", marginTop:"auto", marginBottom:"2rem"}}
+                    disabled={formik.isSubmitting}
+                    className='cta'
+                    >
+                        {formik.isSubmitting ? "Sending..." : "Confirm"}
+                    </button>
+                </form>
+            </article>
+        </>
     );
 };
 
