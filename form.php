@@ -68,15 +68,13 @@ $stmt->bind_param("ssss", $firstName, $lastName, $mail, $message);
 // Connection status
 
 if ($stmt->execute()) {
-    $stmt->close();
-    $conn->close();
-    header("Location: ../formSuccess.html");
-    exit();
+  echo json_encode(['success' => true]);
 } else {
-    $stmt->close();
-    $conn->close();
-    header("Location: ../formError.html");
-    exit();
+  http_response_code(500);
+  echo json_encode(['error' => 'Failed to insert data']);
 }
+
+$stmt->close();
+$conn->close();
 
 ?>
